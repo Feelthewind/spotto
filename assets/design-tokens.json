@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "name": "Spotto Design System",
+    "version": "1.0.0",
+    "description": "Design tokens extracted from Claude Artifact - three-layer architecture"
+  },
+  "primitive": {
+    "colors": {
+      "white": "#ffffff",
+      "black": "#000000",
+      "gray": {
+        "50": "#fafafa",
+        "100": "#f5f5f5",
+        "200": "#e5e5e5",
+        "300": "#d4d4d4",
+        "400": "#a3a3a3",
+        "500": "#878787",
+        "600": "#737373",
+        "700": "#525252",
+        "800": "#404040",
+        "900": "#1f1f1f",
+        "950": "#191919"
+      },
+      "brand": {
+        "primary": "#ba5b3c"
+      }
+    },
+    "opacity": {
+      "0": "0",
+      "5": "0.05",
+      "8": "0.08",
+      "13": "0.13",
+      "20": "0.20",
+      "57": "0.57",
+      "90": "0.90",
+      "93": "0.93",
+      "100": "1"
+    },
+    "spacing": {
+      "0": "0",
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "12": "3rem",
+      "16": "4rem",
+      "24": "6rem",
+      "32": "8rem"
+    },
+    "typography": {
+      "fontFamily": {
+        "sans": "anthropic-sans, anthropic-sans-roman-fallback, -apple-system, BlinkMacSystemFont, system-ui, sans-serif",
+        "serif": "anthropic-serif, ui-serif, Georgia, 'Times New Roman', serif",
+        "icons": "Anthropicons-Variable"
+      },
+      "fontSize": {
+        "xs": "0.75rem",
+        "sm": "0.8125rem",
+        "base": "0.875rem",
+        "lg": "1rem",
+        "xl": "1.25rem"
+      },
+      "fontWeight": {
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700"
+      },
+      "lineHeight": {
+        "tight": "1.2",
+        "normal": "1.5",
+        "relaxed": "1.6"
+      }
+    },
+    "borderRadius": {
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "lg": "0.875rem"
+    },
+    "shadows": {
+      "none": "none",
+      "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
+    }
+  },
+  "semantic": {
+    "light": {
+      "background": {
+        "page": "white",
+        "surface": "white",
+        "secondary": "rgba(black, opacity.13)"
+      },
+      "foreground": {
+        "primary": "gray.950",
+        "secondary": "rgba(black, opacity.90)",
+        "muted": "rgba(black, opacity.57)"
+      },
+      "border": {
+        "default": "rgba(black, opacity.20)",
+        "subtle": "rgba(black, opacity.5)",
+        "divider": "rgba(black, opacity.8)"
+      },
+      "interactive": {
+        "hover": "rgba(black, opacity.5)",
+        "brand": "brand.primary"
+      },
+      "loading": {
+        "spinner": "gray.500"
+      }
+    },
+    "dark": {
+      "background": {
+        "page": "gray.950",
+        "surface": "gray.900",
+        "secondary": "rgba(white, opacity.5)"
+      },
+      "foreground": {
+        "primary": "rgba(white, opacity.93)",
+        "secondary": "rgba(white, opacity.90)",
+        "muted": "rgba(white, opacity.57)"
+      },
+      "border": {
+        "default": "rgba(white, opacity.13)",
+        "subtle": "rgba(white, opacity.5)",
+        "divider": "rgba(white, opacity.8)"
+      },
+      "interactive": {
+        "hover": "rgba(white, opacity.5)",
+        "brand": "brand.primary"
+      },
+      "loading": {
+        "spinner": "gray.400"
+      }
+    }
+  },
+  "component": {
+    "header": {
+      "height": "2.5rem",
+      "background": "background.surface",
+      "borderBottom": "border.subtle"
+    },
+    "button": {
+      "primary": {
+        "background": "foreground.primary",
+        "text": "background.page",
+        "padding": "spacing.2 spacing.4",
+        "borderRadius": "borderRadius.md",
+        "fontSize": "fontSize.sm"
+      },
+      "secondary": {
+        "background": "transparent",
+        "text": "foreground.primary",
+        "border": "border.default",
+        "padding": "spacing.2 spacing.4",
+        "borderRadius": "borderRadius.md",
+        "fontSize": "fontSize.sm"
+      },
+      "hover": {
+        "background": "interactive.hover"
+      }
+    },
+    "error": {
+      "container": {
+        "padding": "spacing.8",
+        "background": "background.page"
+      },
+      "title": {
+        "fontFamily": "typography.fontFamily.serif",
+        "fontSize": "fontSize.xl",
+        "fontWeight": "fontWeight.normal",
+        "color": "foreground.primary"
+      },
+      "description": {
+        "fontSize": "fontSize.lg",
+        "color": "foreground.secondary"
+      }
+    },
+    "loading": {
+      "spinner": {
+        "size": "spacing.6",
+        "color": "loading.spinner"
+      }
+    }
+  }
+}

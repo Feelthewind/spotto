@@ -1,0 +1,272 @@
+/**
+ * Spotto Design System - CSS Variables
+ * Generated from design-tokens.json
+ * Three-layer architecture: Primitive → Semantic → Component
+ */
+
+/* ==========================================================================
+   PRIMITIVE TOKENS (Raw values)
+   ========================================================================== */
+
+:root {
+  /* Colors - Grayscale */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #878787;
+  --color-gray-600: #737373;
+  --color-gray-700: #525252;
+  --color-gray-800: #404040;
+  --color-gray-900: #1f1f1f;
+  --color-gray-950: #191919;
+
+  /* Colors - Brand */
+  --color-brand-primary: #ba5b3c;
+
+  /* Spacing Scale */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  /* Typography - Font Families */
+  --font-sans: anthropic-sans, anthropic-sans-roman-fallback, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-serif: anthropic-serif, ui-serif, Georgia, 'Times New Roman', serif;
+  --font-icons: Anthropicons-Variable;
+
+  /* Typography - Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.25rem;
+
+  /* Typography - Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Typography - Line Heights */
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.6;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.875rem;
+
+  /* Shadows */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   SEMANTIC TOKENS (Purpose aliases)
+   ========================================================================== */
+
+/* Light Mode (Default) */
+:root {
+  /* Backgrounds */
+  --bg-page: var(--color-white);
+  --bg-surface: var(--color-white);
+  --bg-secondary: rgba(0, 0, 0, 0.13);
+
+  /* Foreground */
+  --fg-primary: var(--color-gray-950);
+  --fg-secondary: rgba(0, 0, 0, 0.90);
+  --fg-muted: rgba(0, 0, 0, 0.57);
+
+  /* Borders */
+  --border-default: rgba(0, 0, 0, 0.20);
+  --border-subtle: rgba(0, 0, 0, 0.05);
+  --border-divider: rgba(0, 0, 0, 0.08);
+
+  /* Interactive */
+  --interactive-hover: rgba(0, 0, 0, 0.05);
+  --interactive-brand: var(--color-brand-primary);
+
+  /* Loading */
+  --loading-spinner: var(--color-gray-500);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Backgrounds */
+    --bg-page: var(--color-gray-950);
+    --bg-surface: var(--color-gray-900);
+    --bg-secondary: rgba(255, 255, 255, 0.05);
+
+    /* Foreground */
+    --fg-primary: rgba(255, 255, 255, 0.93);
+    --fg-secondary: rgba(255, 255, 255, 0.90);
+    --fg-muted: rgba(255, 255, 255, 0.57);
+
+    /* Borders */
+    --border-default: rgba(255, 255, 255, 0.13);
+    --border-subtle: rgba(255, 255, 255, 0.05);
+    --border-divider: rgba(255, 255, 255, 0.08);
+
+    /* Interactive */
+    --interactive-hover: rgba(255, 255, 255, 0.05);
+    --interactive-brand: var(--color-brand-primary);
+
+    /* Loading */
+    --loading-spinner: var(--color-gray-400);
+  }
+}
+
+/* Manual dark mode class (overrides prefers-color-scheme) */
+[data-theme="dark"] {
+  --bg-page: var(--color-gray-950);
+  --bg-surface: var(--color-gray-900);
+  --bg-secondary: rgba(255, 255, 255, 0.05);
+  --fg-primary: rgba(255, 255, 255, 0.93);
+  --fg-secondary: rgba(255, 255, 255, 0.90);
+  --fg-muted: rgba(255, 255, 255, 0.57);
+  --border-default: rgba(255, 255, 255, 0.13);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-divider: rgba(255, 255, 255, 0.08);
+  --interactive-hover: rgba(255, 255, 255, 0.05);
+  --interactive-brand: var(--color-brand-primary);
+  --loading-spinner: var(--color-gray-400);
+}
+
+/* ==========================================================================
+   COMPONENT TOKENS (Component-specific)
+   ========================================================================== */
+
+:root {
+  /* Header */
+  --header-height: 2.5rem;
+  --header-bg: var(--bg-surface);
+  --header-border: var(--border-subtle);
+
+  /* Button - Primary */
+  --button-primary-bg: var(--fg-primary);
+  --button-primary-text: var(--bg-page);
+  --button-primary-padding: var(--spacing-2) var(--spacing-4);
+  --button-primary-radius: var(--radius-md);
+  --button-primary-font-size: var(--text-sm);
+
+  /* Button - Secondary */
+  --button-secondary-bg: transparent;
+  --button-secondary-text: var(--fg-primary);
+  --button-secondary-border: var(--border-default);
+  --button-secondary-padding: var(--spacing-2) var(--spacing-4);
+  --button-secondary-radius: var(--radius-md);
+  --button-secondary-font-size: var(--text-sm);
+
+  /* Button - Hover */
+  --button-hover-bg: var(--interactive-hover);
+
+  /* Error Container */
+  --error-container-padding: var(--spacing-8);
+  --error-container-bg: var(--bg-page);
+  --error-title-font: var(--font-serif);
+  --error-title-size: var(--text-xl);
+  --error-title-weight: var(--font-normal);
+  --error-title-color: var(--fg-primary);
+  --error-description-size: var(--text-lg);
+  --error-description-color: var(--fg-secondary);
+
+  /* Loading Spinner */
+  --spinner-size: var(--spacing-6);
+  --spinner-color: var(--loading-spinner);
+}
+
+/* ==========================================================================
+   BASE STYLES (Apply tokens to elements)
+   ========================================================================== */
+
+body {
+  background: var(--bg-page);
+  color: var(--fg-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+/* Header component */
+header {
+  height: var(--header-height);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+}
+
+/* Button components */
+.btn-primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  padding: var(--button-primary-padding);
+  border-radius: var(--button-primary-radius);
+  font-size: var(--button-primary-font-size);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--button-hover-bg);
+}
+
+.btn-secondary {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  padding: var(--button-secondary-padding);
+  border-radius: var(--button-secondary-radius);
+  font-size: var(--button-secondary-font-size);
+  border: 1px solid var(--button-secondary-border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--button-hover-bg);
+}
+
+/* Error component */
+.error-container {
+  padding: var(--error-container-padding);
+  background: var(--error-container-bg);
+}
+
+.error-title {
+  font-family: var(--error-title-font);
+  font-size: var(--error-title-size);
+  font-weight: var(--error-title-weight);
+  color: var(--error-title-color);
+}
+
+.error-description {
+  font-size: var(--error-description-size);
+  color: var(--error-description-color);
+}
+
+/* Loading spinner */
+.spinner {
+  width: var(--spinner-size);
+  height: var(--spinner-size);
+  border: 2px solid var(--spinner-color);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
